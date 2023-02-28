@@ -12,5 +12,10 @@
         public int Linhas { get; set; }
         public int Colunas { get; set; }
         private Peca[,] Pecas { get; set; }
+
+        public Peca Peca(int linha, int coluna)
+        {
+            return Pecas[linha, coluna];
+        }
     }
 }
