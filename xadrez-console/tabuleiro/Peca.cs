@@ -2,9 +2,9 @@
 {
     public class Peca
     {
-        public Peca(Posicao posicao, Tabuleiro tabuleiro, Cor cor)
+        public Peca(Tabuleiro tabuleiro, Cor cor)
         {
-            Posicao = posicao;
+            Posicao = null;
             Tabuleiro = tabuleiro;
             Cor = cor;
             QuantidadeMovimentos = 0;
