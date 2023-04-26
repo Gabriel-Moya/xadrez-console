@@ -9,12 +9,15 @@ namespace xadrez_console.xadrez
             Tabuleiro = new Tabuleiro(8, 8);
             Turno = 1;
             JogadorAtual = Cor.Branca;
+            Terminada = false;
             ColocarPecas();
         }
         
-        public Tabuleiro Tabuleiro { get; private set; }
         private int Turno;
         private Cor JogadorAtual;
+        public Tabuleiro Tabuleiro { get; private set; }
+        public bool Terminada { get; private set; }
+        
 
         public void ExecutarMovimento(Posicao origem, Posicao destino)
         {

@@ -12,7 +12,19 @@ namespace xadrez_console
             {
                 var partidaXadrez = new PartidaXadrez();
 
-                
+                while (!partidaXadrez.Terminada)
+                {
+                    Console.Clear();
+                    Tela.ImprimirTabuleiro(partidaXadrez.Tabuleiro);
+
+                    Console.WriteLine();
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.LerPosicaoXadrez().ToPosition();
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.LerPosicaoXadrez().ToPosition();
+                    
+                    partidaXadrez.ExecutarMovimento(origem, destino);
+                }
 
                 Tela.ImprimirTabuleiro(partidaXadrez.Tabuleiro);
             }
