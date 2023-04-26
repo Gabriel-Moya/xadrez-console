@@ -14,5 +14,8 @@
         public Cor Cor { get; protected set; }
         public int QuantidadeMovimentos { get; protected set; }
         public Tabuleiro Tabuleiro { get; set; }
+
+        public void IncrementarQuantidadeMovimento()
+            => QuantidadeMovimentos++;
     }
 }
